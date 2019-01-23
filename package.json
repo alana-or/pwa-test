@@ -1,0 +1,32 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "um teste sobre pwa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alana",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "web-push": "^3.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alana-or/pwa-test.git"
+  },
+  "os": [
+    "win32"
+  ],
+  "arch": "any"
+}
