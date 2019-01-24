@@ -1,8 +1,6 @@
 const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
   entry: {
     'app.bundle': ['./js/app.js'],
     'service_worker': ['./sv.js']
@@ -10,32 +8,17 @@ module.exports = {
   output: {
     filename: '[name].js'
   },
-  // plugins: [
-  //   new webpack.optimize.UglifyJsPlugin({
-  //       compress: {
-  //         warnings: false,
-  //       },
-  //       output: {
-  //         comments: false,
-  //       },
-  //       sourceMap: true
-  //   }),
-  // ],
-  optimization: {
-    minimizer: [
-      // we specify a custom UglifyJsPlugin here to get source maps in production
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        uglifyOptions: {
-          compress: false,
-          ecma: 6,
-          mangle: true
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          warnings: false,
+        },
+        output: {
+          comments: false,
         },
         sourceMap: true
-      })
-    ]
-  },
+    }),
+  ],
   module: {
     rules: [
       {
