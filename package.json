@@ -9,7 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "web-push": "^3.2.2"
+    "web-push": "^3.2.2",    
+    "lodash": ">=4.17.5",
+    "debug": ">=2.6.9",
+    "randomatic": ">=3.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
